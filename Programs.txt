@@ -1,0 +1,979 @@
+// Check Whether a Given Number is Even or Odd
+
+#include <stdio.h>
+int main()
+{
+ int num;
+ printf("Enter the number: ");
+ scanf("%d",&num);
+ // true if num is perfectly divisible by 2
+ if(num % 2 == 0)
+ printf("%d is even.", num);
+ else
+ printf("%d is odd.", num);
+ return 0;
+
+
+
+
+2. Find the Sum of Even and Odd Numbers
+Program:
+// Find the Sum of Even and Odd Numbers
+#include <stdio.h>
+void main()
+{
+ int i, num, odd_sum = 0, even_sum = 0;
+ printf("Enter the value of number:");
+ scanf("%d",&num);
+ for (i = 1; i <= num; i++)
+ {
+ if (i % 2 == 0)
+ even_sum = even_sum + i;
+ else
+ odd_sum = odd_sum + i;
+ }
+ printf("Sum of all odd numbers upto %d =%d\n",num, odd_sum);
+printf ("Sum of all even numbers upto %d = %d\n",num, even_sum);
+ return 0;
+}
+
+
+
+
+3. Check Whether a Number is Positive or Negative
+Program:
+// Check Whether a Number is Positive or Negative
+#include <stdio.h>
+int main()
+{
+ int num;
+ printf("Enter a number: ");
+ scanf("%d", &num);
+ if (num <= 0)
+ {
+ if (num == 0)
+ printf("You entered 0.");
+ else
+ printf("You entered a negative number.");
+ }
+ else
+ printf("You entered a positive number.");
+ return 0;
+}
+
+
+
+
+4. Find the Largest Number Among Three Numbers
+Program:
+// Find the Largest Number among Three Numbers
+#include <stdio.h>
+int main() {
+ int n1, n2, n3;
+ printf("Enter three different numbers:");
+ scanf("%d %d %d", &n1, &n2, &n3);
+ // if n1 is greater than both n2 and n3, n1 is the largest
+ if (n1 >= n2 && n1 >= n3)
+ printf("%d is the largest number.", n1);
+ // if n2 is greater than both n1 and n3, n2 is the largest
+ if (n2 >= n1 && n2 >= n3)
+ printf("%d is the largest number.", n2);
+ // if n3 is greater than both n1 and n2, n3 is the largest
+ if (n3 >= n1 && n3 >= n2)
+ printf("%d is the largest number.", n3);
+ return 0;
+}
+
+
+
+
+5. Swapping of Two Numbers
+Program:
+// Swapping of Two Numbers
+#include<stdio.h>
+int main() {
+ int first, second, temp;
+ printf("Enter first number: ");
+ scanf("%d", &first);
+ printf("Enter second number: ");
+ scanf("%d", &second);
+ // value of first is assigned to temp
+ temp = first;
+ // value of second is assigned to first
+ first = second;
+ // value of temp (initial value of first) is assigned to second
+ second = temp;
+ // displays number
+printf("\nAfter swapping, first number = %d\n", first);
+ printf("After swapping, second number = %d", second);
+ return 0;
+}
+
+
+
+
+6. Find the Number of Integers Divisible by 5
+Program:
+// Find the Number of Integers Divisible by 5
+#include <stdio.h>
+void main()
+{
+ int i, num1, num2, count = 0, sum = 0;
+ printf("Enter the value of num1 and num2 \n");
+ scanf("%d %d", &num1, &num2);
+ /* Count the number and compute their sum*/
+ printf("Integers divisible by 5 are:");
+ for (i = num1; i < num2; i++)
+ {
+ if (i % 5 == 0)
+ {
+ printf("%3d,", i);
+ count++;
+ sum = sum + i;
+ }
+ }
+printf("\nNumber of integers divisible by 5 between %d and %d = %d\n", num1, num2, count);
+ printf("Sum of all integers that are divisible by 5 = %d\n", sum);
+}
+
+
+
+
+7. Check if Two Numbers are Equal
+
+
+#include <stdio.h>
+void main()
+{
+ int m, n;
+ printf("Enter the values for M and N\n");
+ scanf("%d %d", &m, &n);
+ if (m == n)
+ printf("M and N are equal\n");
+ else
+ printf("M and N are not equal\n");
+}
+
+
+
+
+8. Sum of the Digits
+Program:
+// Sum of the Digits
+#include <stdio.h>
+int main()
+{
+ int n,t, sum = 0, remainder;
+ printf("Enter an integer\n");
+ scanf("%d", &n);
+ t=n;
+ while (t != 0)
+ {
+ remainder = t % 10;
+ sum = sum + remainder;
+ t = t / 10;
+ }
+printf("Sum of digits of '%d'is = %d\n", n, sum);
+ return 0;
+}
+
+
+
+
+9. Increment by 1 to all the Digits of a Given Integer & sum of all digits
+Program:
+// Increment by 1 to all the Digits of a Given Integer & sum of all digits
+#include <stdio.h>
+int main()
+{
+ int n,t, sum = 0, remainder;
+ printf("Enter an integer\n");
+ scanf("%d", &n);
+ t=n;
+ while (t != 0)
+ {
+ remainder = t % 10;
+ sum = sum + (remainder+1);
+ t = t / 10;
+ }
+ printf("Sum of digits of '%d'is = %d\n", n, sum);
+ return 0;
+}
+
+
+
+
+10. Multiplication Table
+
+
+#include <stdio.h>
+int main() {
+ int n;
+ printf("Enter an integer: ");
+ scanf("%d", &n);
+ for (int i = 1; i <= 10; ++i)
+{
+ printf("%d * %d = %d \n", n, i, n * i);
+ }
+ return 0;
+}
+
+
+
+
+11. Count the Number of Vowels and Consonants in a Sentence
+Program:
+// Count the Number of Vowels and Consonants in a Sentence
+#include <stdio.h>
+void main()
+{
+ char string[50];
+ int x, vow = 0, cons = 0, special = 0;
+ printf("Enter The String : \n");
+ gets(string);
+ for (x = 0; string[x] != '\0'; x++)
+ {
+ if ((string[x] == 'a' || string[x] == 'e' || string[x] ==
+ 'i' || string[x] == 'o' || string[x] == 'u') ||
+ (string[x] == 'A' || string[x] == 'E' || string[x] ==
+ 'I' || string[x] == 'O' || string[x] == 'U'))
+ {
+vow = vow + 1;
+ }
+ else
+ {
+ cons = cons + 1;
+ }
+ if (string[x] =='\t' ||string[x] =='\0' || string[x] ==' ')
+ {
+ special = special + 1;
+ }
+ }
+ cons = cons - special;
+ printf("Number Of Vowels In The Given String Is %s = %d\n", string, vow);
+ printf("Number Of Consonants In The Given String Is %s = %d\n", string, cons);
+}
+
+
+
+
+12. Accept the Height of a Person & Categorize as Taller, Dwarf & Average
+Program:
+// Accept the Height of a Person & Categorize as Taller, Dwarf & Average
+#include <stdio.h>
+void main()
+{
+ float height;
+ printf("Enter the Height (in centimetres) \n");
+ scanf("%f", &height);
+ if (height < 150.0)
+ printf("Dwarf \n");
+ else if ((height >= 150.0) && (height <= 165.0))
+ printf(" Average Height \n");
+else if ((height > 165.0) && (height <= 195.0))
+ printf("Taller \n");
+ else
+ printf("Abnormal height \n");
+}
+
+
+
+
+13. Prime Number
+Program:
+// Prime Number
+#include <stdio.h>
+main() {
+ int n, i, c = 0;
+ printf("Enter any number n:");
+ scanf("%d", &n);
+ //logic
+ for (i = 1; i <= n; i++) {
+ if (n % i == 0) {
+ c++;
+ }
+ }
+ if (c == 2) {
+ printf("%d is a Prime number", n);
+ }
+ else {
+ printf("%d is not a Prime number", n);
+ }
+ return 0;
+}
+
+
+
+
+14. Check Whether a Given Number is Perfect Number
+
+
+#include <stdio.h>
+int main()
+{
+ int number, rem, sum = 0, i;
+ printf("Enter a Number: ");
+ scanf("%d", &number);
+ for (i = 1; i <= (number - 1); i++)
+ {
+ rem = number % i;
+if (rem == 0)
+ {
+ sum = sum + i;
+ }
+ }
+ if (sum == number)
+ printf("%d is perfect number", number);
+ else
+ printf("%d is not a perfect number", number);
+ return 0;
+}
+
+
+
+
+15. Check Armstrong Number
+Program:
+// Check Armstrong Number
+#include <stdio.h>
+int power(int, int);
+int main()
+{
+ int n, sum = 0, t, remainder, digits = 0;
+printf("Input an integer\n");
+ scanf("%d", &n);
+ t = n;
+ // Count number of digits
+ while (t != 0) {
+ digits++;
+ t = t/10;
+ }
+ t = n;
+ while (t != 0) {
+ remainder = t%10;
+ sum = sum + power(remainder, digits);
+ t = t/10;
+ }
+ if (n == sum)
+ printf("%d is an Armstrong number.\n", n);
+ else
+ printf("%d isn't an Armstrong number.\n", n);
+ return 0;
+}
+int power(int n, int r) {
+ int c, p = 1;
+ for (c = 1; c <= r; c++)
+ p = p*n;
+ return p;
+}
+
+
+
+
+16. Reverse a Number
+
+
+#include <stdio.h>
+int main() {
+ int n, reverse = 0, remainder;
+ printf("Enter an integer: ");
+ scanf("%d", &n);
+ while (n != 0) {
+ remainder = n % 10;
+ reverse = reverse * 10 + remainder;
+ n /= 10;
+ }
+ printf("Reversed number = %d", reverse);
+ return 0;
+}
+17. Reverse a Number and Check if it is a Palindrome
+Program:
+// Reverse a Number and Check if it is a Palindrome
+#include <stdio.h>
+int main() {
+ int n, reverse = 0, remainder, num;
+ printf("Enter an integer: ");
+ scanf("%d", &n);
+ num = n;
+ while (n != 0) {
+ remainder = n % 10;
+ reverse = reverse * 10 + remainder;
+ n /= 10;
+ }
+ if (num == reverse)
+printf("Palindrome");
+ else
+ printf("Not a Palindrome");
+ return 0;
+}
+
+
+
+
+18. C Program to Add Two Binary Numbers
+Program:
+// C Program to Add Two Binary Numbers
+#include <stdio.h>
+int main()
+{
+ long binary1, binary2;
+ int i = 0, remainder = 0, sum[20];
+ printf("Enter the first binary number: ");
+ scanf("%ld", &binary1);
+ printf("Enter the second binary number: ");
+ scanf("%ld", &binary2);
+while (binary1 != 0 || binary2 != 0)
+ {
+ sum[i++] =(binary1 % 10 + binary2 % 10 + remainder) % 2;
+ remainder =(binary1 % 10 + binary2 % 10 + remainder) / 2;
+ binary1 = binary1 / 10;
+ binary2 = binary2 / 10;
+ }
+ if (remainder != 0)
+ sum[i++] = remainder;
+ --i;
+ printf("Sum of two binary numbers: ");
+while (i >= 0)
+ printf("%d", sum[i--]);
+ return 0;
+}
+
+
+
+
+19. Find Prime Numbers in a Given Range
+Program:
+// Find Prime Numbers in a Given Range
+#include <stdio.h>
+#include <stdlib.h>
+void main()
+{
+ int num1, num2, i, j, flag, temp, count = 0;
+ printf("Enter the value of num1 and num2 \n");
+ scanf("%d %d", &num1, &num2);
+ if (num2 < 2)
+ {
+ printf("There are no primes upto %d\n", num2);
+ exit(0);
+ }
+ printf("Prime numbers are \n");
+ temp = num1;
+ if ( num1 % 2 == 0)
+ {
+ num1++;
+ }
+ for (i = num1; i <= num2; i = i + 2)
+ {
+ flag = 0;
+ for (j = 2; j <= i / 2; j++)
+ {
+if ((i % j) == 0)
+ {
+ flag = 1;
+ break;
+ }
+ }
+ if (flag == 0)
+ {
+ printf("%d\n", i);
+ count++;
+ }
+ }
+ printf("Number of primes between %d & %d = %d\n", temp, num2, count);
+}
+
+
+
+
+20. Leap Year
+/*The year is exactly divisible by 400 (such as 2000,2400) or,
+The year is exactly divisible by 4 (such as 2008, 2012, 2016) and not a multiple of
+100 (such as 1900, 2100, 2200).*/
+Program:
+// Leap Year
+#include <stdio.h>
+int main() {
+ int year;
+ printf("Enter a year: ");
+ scanf("%d", &year);
+ // leap year if perfectly divisible by 400
+ if (year % 400 == 0) {
+ printf("%d is a leap year.", year);
+ }
+ // not a leap year if divisible by 100
+ // but not divisible by 400
+ else if (year % 100 == 0) {
+ printf("%d is not a leap year.", year);
+ }
+else if (year % 4 == 0) {
+ printf("%d is a leap year.", year);
+ }
+ // all other years are not leap years
+ else {
+ printf("%d is not a leap year.", year);
+ }
+ return 0;
+}
+
+
+
+
+21. Fibonacci Series
+Program:
+// Fibonacci Series
+#include <stdio.h>
+int main() {
+ int i, n;
+ // initialize first and second terms
+ int t1 = 0, t2 = 1, t3;
+ // get no. of terms from user
+ printf("Enter the number of terms: ");
+ scanf("%d", &n);
+ // print the first two terms t1 and t2
+ printf("Fibonacci Series: %d, %d, ", t1, t2);
+ // print 3rd to t3 = t1 + t2;nth terms
+ for (i = 3; i <= n; ++i)
+ {
+ t3 = t1 + t2;
+ printf("%d, ", t3);
+ t1 = t2;
+
+
+ t2 = t3;
+ }
+return 0;
+}
+
+
+
+
+22. Factorial
+Program:
+// Factorial
+#include <stdio.h>
+int main() {
+ int n, i;
+ int fact = 1;
+ printf("Enter an integer: ");
+ scanf("%d", &n);
+ // shows error if the user enters a negative integer
+ if (n < 0)
+ printf("Error! Factorial of a negative number doesn't exist.");
+ else {
+ for (i = 1; i <= n; ++i) {
+ fact *= i;
+ }
+ printf("Factorial of %d = %d", n, fact);
+ }
+ return 0;
+}
+
+
+
+
+23. Find GCD of Two Integers
+Program:
+// Find GCD of Two Integers
+#include <stdio.h>
+int main()
+{
+ int n1, n2, i, gcd;
+printf("Enter two integers: ");
+ scanf("%d %d", &n1, &n2);
+ for(i=1; i <= n1 && i <= n2; ++i)
+ {
+ // Checks if i is factor of both integers
+ if(n1%i==0 && n2%i==0)
+ gcd = i;
+ }
+ printf("G.C.D of %d and %d is %d", n1, n2, gcd);
+ return 0;
+}
+
+
+
+
+24. Find LCM of Two Integers
+Program:
+// Find LCM of Two Integers
+#include <stdio.h>
+int main() {
+ int n1, n2, max;
+ printf("Enter two positive integers: ");
+ scanf("%d %d", &n1, &n2);
+ // maximum number between n1 and n2 is stored in max
+ max = (n1 > n2) ? n1 : n2;
+ while (1) {
+ if ((max % n1 == 0) && (max % n2 == 0)) {
+ printf("The LCM of %d and %d is %d.", n1, n2, max);
+ break;
+ }
+ ++max;
+ }
+return 0;
+}
+
+
+
+
+25. Floyd’s Triangle
+Program:
+// Floyd’s Triangle
+#include <stdio.h>
+int main()
+{
+ int rows, i, j, number = 1;
+ printf("Enter the number of rows: ");
+ scanf("%d", &rows);
+for (i = 1; i <= rows; i++)
+ {
+ for (j = 1; j <= i; ++j)
+ {
+ printf("%d ", number);
+ ++number;
+ }
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+
+
+// Find the sum of all even digits in a given number.
+#include <stdio.h>
+int main()
+{
+ int n, t, sum = 0, remainder;
+printf("Enter an integer\n");
+ scanf("%d", &n);
+ t = n;
+ while (t != 0)
+ {
+ remainder = t % 10;
+ t = t / 10;
+ if (remainder % 2 == 0)
+ sum = sum + remainder;
+ }
+ printf("Sum of digits of %d = %d\n", n, sum);
+ return 0;
+}
+
+
+
+
+Half Pyramid of *
+*
+* *
+* * *
+* * * *
+* * * * *
+C Program
+#include <stdio.h>
+int main() {
+ int i, j, rows;
+ printf("Enter the number of rows: ");
+ scanf("%d", &rows);
+ for (i = 1; i <= rows; ++i) {
+ for (j = 1; j <= i; ++j) {
+ printf("* ");
+ }
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+Half Pyramid of Numbers
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+C Program
+#include <stdio.h>
+int main() {
+ int i, j, rows;
+ printf("Enter the number of rows: ");
+ scanf("%d", &rows);
+ for (i = 1; i <= rows; ++i) {
+ for (j = 1; j <= i; ++j) {
+ printf("%d ", j);
+ }
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+Half Pyramid of Alphabets
+A
+B B
+C C C
+D D D D
+E E E E E
+C Program
+#include <stdio.h>
+int main() {
+ int i, j;
+ char input, alphabet = 'A';
+ printf("Enter an uppercase character you want to print in the last row: ");
+ scanf("%c", &input);
+ for (i = 1; i <= (input - 'A' + 1); ++i) {
+ for (j = 1; j <= i; ++j) {
+ printf("%c ", alphabet);
+ }
+ ++alphabet;
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+
+
+Example 4: Inverted half pyramid of *
+* * * * *
+* * * *
+* * *
+* *
+*
+C Program
+#include <stdio.h>
+int main() {
+ int i, j, rows;
+ printf("Enter the number of rows: ");
+ scanf("%d", &rows);
+ for (i = rows; i >= 1; --i) {
+ for (j = 1; j <= i; ++j) {
+ printf("* ");
+ }
+printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+
+
+
+
+Example 5: Inverted half pyramid of numbers
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+C Program
+#include <stdio.h>
+int main() {
+ int i, j, rows;
+ printf("Enter the number of rows: ");
+ scanf("%d", &rows);
+ for (i = rows; i >= 1; --i) {
+ for (j = 1; j <= i; ++j) {
+ printf("%d ", j);
+ }
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+Inverted half pyramid of numbers
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+C Program
+#include <stdio.h>
+int main() {
+ int i, j, rows;
+ printf("Enter the number of rows: ");
+ scanf("%d", &rows);
+ for (i = rows; i >= 1; --i) {
+ for (j = 1; j <= i; ++j) {
+ printf("%d ", j);
+ }
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+
+
+Example 6: Full Pyramid of *
+ *
+ * * *
+ * * * * *
+ * * * * * * *
+* * * * * * * * *
+C Program
+#include <stdio.h>
+int main() {
+ int i, space, rows, k = 0;
+ printf("Enter the number of rows: ");
+scanf("%d", &rows);
+ for (i = 1; i <= rows; ++i, k = 0) {
+ for (space = 1; space <= rows - i; ++space) {
+ printf(" ");
+ }
+ while (k != 2 * i - 1) {
+ printf("* ");
+ ++k;
+ }
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+
+
+
+
+Example 7: Full Pyramid of Numbers
+ 1
+ 2 3 2
+ 3 4 5 4 3
+ 4 5 6 7 6 5 4
+5 6 7 8 9 8 7 6 5
+C Program
+#include <stdio.h>
+int main() {
+ int i, space, rows, k = 0, count = 0, count1 = 0;
+ printf("Enter the number of rows: ");
+ scanf("%d", &rows);
+ for (i = 1; i <= rows; ++i) {
+ for (space = 1; space <= rows - i; ++space) {
+ printf(" ");
+ ++count;
+ }
+ while (k != 2 * i - 1) {
+ if (count <= rows - 1) {
+ printf("%d ", i + k);
+ ++count;
+ } else {
+ ++count1;
+ printf("%d ", (i + k - 2 * count1));
+ }
+ ++k;
+ }
+ count1 = count = k = 0;
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+Inverted full pyramid of *
+* * * * * * * * *
+ * * * * * * *
+ * * * * *
+ * * *
+ *
+C Program
+#include <stdio.h>
+int main() {
+ int rows, i, j, space;
+ printf("Enter the number of rows: ");
+ scanf("%d", &rows);
+ for (i = rows; i >= 1; --i) {
+ for (space = 0; space < rows - i; ++space)
+ printf(" ");
+ for (j = i; j <= 2 * i - 1; ++j)
+ printf("* ");
+ for (j = 0; j < i - 1; ++j)
+ printf("* ");
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+
+
+
+
+Example 9: Pascal's Triangle
+ 1
+ 1 1
+ 1 2 1
+ 1 3 3 1
+ 1 4 6 4 1
+1 5 10 10 5 1
+C Program
+#include <stdio.h>
+int main() {
+ int rows, coef = 1, space, i, j;
+printf("Enter the number of rows: ");
+ scanf("%d", &rows);
+ for (i = 0; i < rows; i++) {
+ for (space = 1; space <= rows - i; space++)
+ printf(" ");
+ for (j = 0; j <= i; j++) {
+ if (j == 0 || i == 0)
+ coef = 1;
+ else
+ coef = coef * (i - j + 1) / j;
+ printf("%4d", coef);
+ }
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
+
+
+
+
+
+
+
+Example 10: Floyd's Triangle.
+1
+2 3
+4 5 6
+7 8 9 10
+C Program
+#include <stdio.h>
+int main() {
+ int rows, i, j, number = 1;
+ printf("Enter the number of rows: ");
+ scanf("%d", &rows);
+ for (i = 1; i <= rows; i++) {
+ for (j = 1; j <= i; ++j) {
+ printf("%d ", number);
+ ++number;
+ }
+ printf("\n");
+ }
+ return 0;
+}
+
+
+
